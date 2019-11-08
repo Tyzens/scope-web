@@ -1,0 +1,301 @@
+<div class="row mb-3">
+  <div class="col-xxl-3">
+    <nb-card>
+      <nb-card-body>
+        <h5 class="card-title">
+          <span class="glyphicon glyphicon-user">9,869,434</span>
+        </h5>
+        <p class="card-text">Total Contracts</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-3">
+    <nb-card>
+      <nb-card-body>
+        <h5 class="card-title">
+          <span class="glyphicon glyphicon-user">597,053</span>
+        </h5>
+        <p class="card-text">1Collected Codes</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-3">
+    <nb-card>
+      <nb-card-body>
+        <h5 class="card-title">
+          <span class="glyphicon glyphicon-user">115,673</span>
+        </h5>
+        <p class="card-text">Analyzed Codes</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-xxl-3">
+    <nb-card>
+      <nb-card-body>
+        <h5 class="card-title">
+          <span class="glyphicon glyphicon-user">4,034,888</span>
+        </h5>
+        <p class="card-text">Detect Count</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<div class="row ">
+  <div class="mb-3 col-xxl-6">
+    <nb-card class="my-container">
+      <nb-card-header>
+        <h6>Search Options</h6>
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset>
+          <nb-tab tabTitle="Address">
+            <div class="col-md-12 col-lg-12 col-lx-12">
+
+              <nb-tabset>
+
+                <nb-tab tabTitle="Address">
+                  <div class="pt-2">
+                    <div class="ml-0">
+                      <div class="col-md-12 col-lg-12 col-lx-12">
+                        <form class="form-inline">
+                          <nb-select placeholder=" Ethereum Main Network" [(selected)]="selectedItem">
+                            <nb-option value="">Ethereum Main Network</nb-option>
+                            <nb-option value="">Kovan Test Network</nb-option>
+                            <nb-option value="">Rinkeby Test Network</nb-option>
+                            <nb-option value="">Ropstern Test Network</nb-option>
+                          </nb-select>
+                        </form>
+                        <div class="pt-3">
+                          <input type="text" nbInput fullWidth placeholder="0x9b...">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-5">
+                    <button nbButton id="btnAnalysis" size="small" class="float-right">Analysis</button>
+                  </div>
+                </nb-tab>
+                <nb-tab tabTitle="Paste Code">
+
+                  <div class="code">
+                    <div class="ml-1">
+                      <ngx-codemirror [(ngModel)]="content" [options]="{
+                      lineNumbers: true,
+                      mode: 'javascript'
+                    }"></ngx-codemirror>
+                    </div>
+                  </div>
+                  <div class="pt-2">
+                    <button nbButton id="btnAnalysis" size="small" class="float-right">Analysis</button>
+                  </div>
+
+                </nb-tab>
+                <nb-tab tabTitle="Upload File">
+                  <ngx-user-activity></ngx-user-activity>
+                  <div class="pt-1">
+                    <button nbButton id="btnAnalysis" size="small" class="float-right">Analysis</button>
+                  </div>
+                </nb-tab>
+              </nb-tabset>
+            </div>
+          </nb-tab>
+
+          <nb-tab tabTitle="Hyper-Ledger">
+            Not support yet
+          </nb-tab>
+
+          <nb-tab tabTitle="File">
+            <span>
+              Not support yet
+            </span>
+          </nb-tab>
+        </nb-tabset>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6">
+    <nb-card class="my-container">
+      <nb-card-header>
+        <h6>Report</h6>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="container">
+          <div class="py-5">
+            <div class="row align-items-center">
+              <div class="col-6 col-sm-4">
+                <canvas id="doughnut" width="368" height="368"
+                  style="display: block; height: 184px; width: 184px;"></canvas>
+              </div>
+              <div class="info">
+                <div class="col-auto col-sm-auto">
+                  Request ID : <br>
+                  Address : <br>
+                  Network :<br>
+                  Total :<br>
+                  LastSeen :
+                </div>
+              </div>
+              <div class="col">
+                5d8d5ff41322d969590037fc <br>
+                <a href="/pages/report">0xd4a350297049c129efc3...</a><br>
+                Ethereum Ropsten Network <br>
+                95 <br>
+                2019-09-27 01:03:48.783000
+              </div>
+            </div>
+          </div>
+          <div class="px-4">
+            <div class="row">
+              <div class="col-sm-auto">
+                <button type="button" class="btn" style="background-color: #66cc00">
+                </button>
+                Information : 60</div>
+              <div class="col-sm-auto"><button type="button" class="btn" style="background-color: #d4d600"></button> Low
+                :
+                20</div>
+              <div class="col-sm-auto"><button type="button" class="btn" style="background-color: #ff9900"></button>
+                Medium : 10</div>
+              <div class="col-sm-auto"><button type="button" class="btn" style="background-color: #ff0000"></button>
+                High
+                : 5</div>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<div class="row">
+  <div class=" col-12 col-md-12">
+    <ngx-country-orders></ngx-country-orders>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xxl-6">
+    <nb-card class="my-container">
+      <nb-card-header>
+        <h6>Recent Auditing History</h6>
+      </nb-card-header>
+      <nb-card-body>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Network</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Time</td>
+              <td>Network</td>
+              <td>Status</td>
+              <td>Address</td>
+            </tr>
+
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0x667088b212ce3d0...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0x9Fa8fA61A10Ff89...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0x989b2ab1e5a05fd...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xf64b2060c3e6d76...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xbacff1f636530c4...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xa6f2bc9275ce55c...</td>
+            </tr>
+          </tbody>
+        </table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-xxl-6">
+    <nb-card class="my-container">
+      <nb-card-header>
+        <h4>Sqope Queue Status</h4>
+      </nb-card-header>
+      <nb-card-body>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Network</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+            <tr>
+              <td>2019-09-25 06:03:59</td>
+              <td>Ethereum Ropsten Network</td>
+              <td>0xc41a28d78923a3a...</td>
+            </tr>
+          </tbody>
+        </table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

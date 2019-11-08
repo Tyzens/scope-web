@@ -1,0 +1,19 @@
+.input-label {
+  background: #3466ff;
+  color: #fff;
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.input-label:hover {
+  background: #517dff;
+  cursor: pointer;
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+#file {
+  display: none;
+}

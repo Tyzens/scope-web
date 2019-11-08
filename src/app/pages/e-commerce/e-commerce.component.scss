@@ -1,0 +1,47 @@
+:host nb-tab {
+  padding: 1.25rem;
+}
+
+/*
+table {
+  background-color: 622b45
+}
+*/
+.my-container {
+  width: 100%;
+  height: 50vh;
+}
+
+.my-container2 {
+  width: 100%;
+  height: 462px;
+}
+
+.info,
+.col {
+  font-size: 18px;
+}
+
+.form-div {
+  margin-top: 100px;
+}
+
+.input-label {
+  background: #3466ff;
+  color: #fff;
+  padding: 50px;
+  transition: 0.3s;
+}
+
+.input-label:hover {
+  background: #517dff;
+  cursor: pointer;
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+#file {
+  display: none;
+}
